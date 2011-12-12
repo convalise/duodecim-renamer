@@ -1,0 +1,9 @@
+*.class
+/cheat.db
+/DuodecimRenamer.jar
+/RESOURCEPACK.BIN
+/temp_final.jar
+/build
+/dist
+/store
+/test

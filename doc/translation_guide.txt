@@ -1,0 +1,432 @@
+
+	TRANSLATION GUIDE for 'Doudecim BGM Cheat Generator'
+	
+	------------------------------------
+	|	PT translation by myself       |
+	|	EN translation by myself       |
+	|	DE translation by              |
+	|	ES translation by              |
+	|	FR translation by DeanW        |
+	|	IT translation by Oniangel     |
+	------------------------------------
+
+	PT: "SELECIONE UMA ABA E COMECE A RENOMEAR!"
+	EN: "SELECT A TAB AND START RENAMING!"
+	DE: 
+	ES: 
+	FR: "SELECTIONNEZ UN ONGLET ET COMMENCEZ A RENNOMER"
+	IT: "SELEZIONA UNA SCHEDA E INCOMINCIA A RINOMINARE!"
+	
+	PT: "ESTE APLICATIVO É UM GERADOR DE CHEATS GRATUITO PARA CWCHEAT E NÃO É LICENCIADO PELA SQUARE ENIX. DISSIDIA 012 [DUODECIM]: FINAL FANTASY E TODO MATERIAL RELACIONADO PERTENCEM À SQUARE ENIX. TODOS OS DIREITOS RESERVADOS."
+	EN: "THIS SMALL APP IS A FREEWARE FANMADE CHEAT GENERATOR FOR CWCHEAT AND IS NOT LICENSED BY SQUARE ENIX. DISSIDIA 012 [DUODECIM]: FINAL FANTASY AND ALL RELATED MATERIAL BELONG TO SQUARE ENIX. ALL RIGHTS RESERVED."
+	DE: 
+	ES: 
+	FR: "CETTE PETITE APPLICATION EST UN GENERATEUR DE CHEATS CONCU PAR DES FANS POUR CWCHEAT, ELLE N'EST PAS LICENSÉ PAR SQUARE ENIX. DISSIDIA 012 [DUODECIM]: FINAL FANTASY ET TOUT LE MATERIEL LIEE APPARTIENNENT A SQUARE ENIX. TOUT DROITS RESERVÉS."
+	IT: "QUESTA APPLICAZIONE È UN FANMADE FREEWARE GENERATORE DI CHEAT PER CWCHEAT E NON È LICENZIATA DA SQUARE ENIX. DISSIDIA 012 [DUODECIM]: FINAL FANTASY E TUTTI I RELATIVI MATERIALI APPARTENGONO A SQUARE ENIX. TUTTI I DIRITTI RISERVATI."
+	
+	PT: "BGM CHEAT GENERATOR PROGRAMADO POR (...)"
+	EN: "BGM CHEAT GENERATOR MADE BY (...)"
+	DE: 
+	ES: 
+	FR: "BGM CHEAT GENERATOR PROGRAMMÉ PAR (...)"
+	IT: "BGM CHEAT GENERATOR PROGRAMMATO DA (...)"
+	
+	PT: "LOGOS DE FINAL FANTASY REPRODUZIDOS POR (...)"
+	EN: "FINAL FANTASY LOGOS REPRODUCED BY (...)"
+	DE: 
+	ES: 
+	FR: LES LOGOS DE FINAL FANTASY SONT REPRODUIS PAR (...)"
+	IT: "LOGHI FINAL FANTASY RIPRODOTTI DA (...)"
+	
+	PT: "SELECIONE UMA ABA"
+	EN: "SELECT A TAB"
+	DE: 
+	ES: 
+	FR: "SELECTIONNEZ UN ONGLET"
+	IT: "SELEZIONA UNA SCHEDA"
+	
+	PT: "SELECIONE UMA MÚSICA"
+	EN: "SELECT A MUSIC"
+	DE: 
+	ES: 
+	FR: "SELECTIONNEZ UNE MUSIQUE"
+	IT: "SELEZIONA UNA TRACCIA MUSICALE"
+	
+	PT: "EDITE O NOME DA MÚSICA"
+	EN: "EDIT THE MUSIC'S TITLE"
+	DE: 
+	ES: 
+	FR: "EDITEZ LE TITRE DE LA MUSIQUE"
+	IT: "MODIFICA IL TITOLO DELLA TRACCIA"
+	
+	PT: "GERE O ARQUIVO DE CHEATS"
+	EN: "GENERATE THE CHEAT FILE"
+	DE: 
+	ES: 
+	FR: "GENEREZ LE FICHIER CHEAT"
+	IT: "CREA IL FILE CHEAT"
+	
+	PT: "COPIE PARA O MEMORY STICK"
+	EN: "COPY TO THE MEMORY STICK"
+	DE: 
+	ES: 
+	FR: "COPIEZ-LE DANS LE MEMORY STICK"
+	IT: "COPIALO NELLA MEMORY STICK"
+	
+	PT: "COMENTE!"
+	EN: "COMMENT!"
+	DE: 
+	ES: 
+	FR: "COMENTEZ!"
+	IT: "COMMENTA!"
+	
+	PT: "NOTAS"
+	EN: "NOTES"
+	DE: 
+	ES: 
+	FR: "NOTES"
+	IT: "NOTE"
+	
+	PT: "AS FUNÇÕES DE SAVE E LOAD FACILITAM FUTURAS MODIFICAÇÕES DA LISTA DE MÚSICAS"
+	EN: "SAVE AND LOAD FUNCTIONS MAKE LATTER MODIFICATIONS OF THE TITLE LIST EASIER"
+	DE: 
+	ES: 
+	FR: "SAUVEGARDEZ ET CHARGEZ DES FONCTIONS RENDANT LES FUTURES MODIFICATIONS DE LA LISTE DE TITRES PLUS FACILE"
+	IT: "LE FUNZIONI SALVA E CARICA FACILITANO FUTURE MODIFICHE NELLA LISTA TITOLI"
+	
+	PT: "DEFINIR O ESTADO PADRÃO DOS CHEATS COMO 'SELECIONADO' POUPA A NECESSIDADE DE TER DE SELECIONAR MANUALMENTE CADA UM DELES NO CWCHEAT"
+	EN: "SETTING THE CHEATS' DEFAULT STATE TO 'SELECTED' SPARES THE NEED TO MANUALLY SELECT EACH AND EVERY ONE OF THEM ON CWCHEAT"
+	DE: 
+	ES: 
+	FR: "POUR DÉFINIR LE STATUT PAR DEFAUT DES CHEATS COMME 'SELECTIONNES, IL FAUT CHOISIR MANUELLEMENT CHACUN D'ENTRE EUX DANS CWCHEAT"
+	IT: "SETTANDO LO STATO PREDEFINITO DEI FILE CHEAT SU SELEZIONE SI ELIMINA IL BISOGNO DI SELEZIONARLI MANUALMENTE UNO AD UNO IN CWCHEAT"
+	
+	PT: "A RODA DO MOUSE PODE SER UTILIZADA PARA NAVEGAR ENTRE AS ABAS"
+	EN: "THE MOUSE WHEEL CAN BE USED TO SWITCH BETWEEN TABS"
+	DE: 
+	ES: 
+	FR: "LA SOURIS PEUT ÊTRE UTILISÉE POUR NAVIGER ENTRE LES ONGLETS"
+	IT: "LA ROTELLA DEL MOUSE PUÒ ESSERE UTILIZZATA PER SCORRERE TRA LE VARIE SCHEDE"
+	
+	PT: "ALGUMAS ABAS PODEM TER MAIS DE UMA IMAGEM PARA MOSTRAR"
+	EN: "SOME TABS MAY HAVE MORE THAN ONE IMAGE TO SHOW"
+	DE: 
+	ES: 
+	FR: "CERTAINS ONGLETS PEUVENT AVOIR PLUS QU'UNE IMAGE A MONTRER"
+	IT: "ALCUNE SCHEDE POTREBBERO AVERE PIÙ DI UN IMMAGINE DA MOSTRARE"
+	
+	PT: "Início"
+	EN: "Start"
+	DE: 
+	ES: 
+	FR: "Commencement"
+	IT: "Inizio"
+	
+	PT: "MENU"
+	EN: "MENU"
+	DE: 
+	ES: 
+	FR: "MENU"
+	IT: "MENU"
+	
+	PT: "Idioma"
+	EN: "Language"
+	DE: 
+	ES: 
+	FR: "Langue"
+	IT: "Lingua"
+	
+	PT: "Tema"
+	EN: "Theme"
+	DE: 
+	ES: 
+	FR: "Thême"
+	IT: "Tema"
+	
+	PT: "Exportar cheats"
+	EN: "Export cheats"
+	DE: 
+	ES: 
+	FR: "Exporter des cheats"
+	IT: "Esportazione file cheats"
+	
+	PT: "Redefinir lista"
+	EN: "Reset fields"
+	DE: 
+	ES: 
+	FR: "Réinitialiser les champs"
+	IT: "Resetta campi"
+	
+	PT: "Salvar lista atual"
+	EN: "Save current list"
+	DE: 
+	ES: 
+	FR: "Sauvegarder la liste actuel"
+	IT: "Salva lista corrente"
+	
+	PT: "Carregar última lista salva"
+	EN: "Load last saved list"
+	DE: 
+	ES: 
+	FR: "Charger la dernière liste sauvegardée"
+	IT: "Carica ultima lista salvata"
+	
+	PT: "Ajuda"
+	EN: "Help"
+	DE: 
+	ES: 
+	FR: "Aide"
+	IT: "Aiuto"
+	
+	PT: "Sobre..."
+	EN: "About..."
+	DE: 
+	ES: 
+	FR: "Sur..."
+	IT: "Informazioni su..."
+	
+	PT: "SAIR"
+	EN: "EXIT"
+	DE: 
+	ES: 
+	FR: "QUITTER"
+	IT: "ESCI"
+	
+	PT: "Padrão"
+	EN: "Default"
+	DE: 
+	ES: 
+	FR: "Défaut"
+	IT: "Predefinito"
+	
+	PT: "Escuro"
+	EN: "Dark"
+	DE: 
+	ES: 
+	FR: "Sombre"
+	IT: "Buio"
+	
+	PT: "Personalizado"
+	EN: "Custom"
+	DE: 
+	ES: 
+	FR: "Personnaliser"
+	IT: "Personalizzato"
+	
+	PT: "Habilitado"
+	EN: "Enabled"
+	DE: 
+	ES: 
+	FR: "Activé"
+	IT: "Abilitato"
+	
+	PT: "Mudo"
+	EN: "Mute"
+	DE: 
+	ES: 
+	FR: "Muet"
+	IT: "Muto"
+	
+	PT: "EXPORTAR"
+	EN: "EXPORT"
+	DE: 
+	ES: 
+	FR: "EXPORTER"
+	IT: "ESPORTA"
+	
+	PT: "Salvar lista atual"
+	EN: "Save current list"
+	DE: 
+	ES: 
+	FR: "Sauvergarder la liste actuel"
+	IT: "Salva lista corrente"
+	
+	PT: "Carregar última lista salva"
+	EN: "Load last saved list"
+	DE: 
+	ES: 
+	FR: "Charger la dernière liste sauvegardée"
+	IT: "Carica ultima lista salvata"
+	
+	PT: "Versão americana"
+	EN: "American version"
+	DE: 
+	ES: 
+	FR: "Version américaine"
+	IT: "Versione Americana"
+	
+	PT: "Versão européia"
+	EN: "European version"
+	DE: 
+	ES: 
+	FR: "Version européenne"
+	IT: "Versione Europea"
+	
+	PT: "Versão japonesa"
+	EN: "Japanese version"
+	DE: 
+	ES: 
+	FR: "Version japonaise"
+	IT: "Versione Giapponese"
+	
+	PT: "Cheats selecionados por padrão"
+	EN: "Cheats selected by default"
+	DE: 
+	ES: 
+	FR: "Cheats séléctionnés par défaut"
+	IT: "Cheats predefiniti"
+	
+	PT: "Lista salva com sucesso!"
+	EN: "The title list was successfully saved!"
+	DE: 
+	ES: 
+	FR: "La liste a été sauvegardée avec succés"
+	IT: "La lista titoli e stata salvata con successo!"
+	
+	PT: "Carregada lista do dia (dd/mm/yyyy)"
+	EN: "Loaded title list from the day (mm/dd/yyyy)"
+	DE: 
+	ES: 
+	FR: "Charger le titre de la liste par le jour (dd/mm/yyyy)"
+	IT: "Caricata lista titoli del (dd/mm/yyyy)"
+	
+	PT: "O arquivo de cheats foi exportado com sucesso para o local (...)"
+	EN: "The cheat file was successfully exported to the location (...)"
+	DE: 
+	ES: 
+	FR: "Le fichier cheat a été exporté avec succés à l'emplacement (...)"
+	IT: "Il file cheat e stato esportato con successo in (...)"
+	
+	PT: "Clique na imagem!"
+	EN: "Click on the image!"
+	DE: 
+	ES: 
+	FR: "Cliquez sur l'image!"
+	IT: "Clicca sull'immagine"
+	
+	PT: "Selecione para habilitar a edição desta música."
+	EN: "Select to enable edition to this title."
+	DE: 
+	ES: 
+	FR: "Sélectionnez pour activer l'édition de cette musique."
+	IT: "Seleziona per abilitare la modifica di questo titolo"
+	
+	PT: "Salvar o estado atual dos nomes das músicas para usos futuros."
+	EN: "Save the current state of the music titles for future uses."
+	DE: 
+	ES: 
+	FR: "Sauvergarder le statut actuel du titre de la musique pour des usages futures."
+	IT: "Salva lo stato corrente dei titoli musicali per futuri utilizzi."
+	
+	PT: "Carregar o último estado salvo dos nomes das músicas."
+	EN: "Load the last saved state of the music titles."
+	DE: 
+	ES: 
+	FR: "Charger le dernier statut sauvegardé du titre de la musique."
+	IT: "Carica l'ultimo salvataggio dei titoli musicali."
+	
+	PT: "Gerar arquivo de cheats compatível com CWCHEAT para as músicas selecionadas."
+	EN: "Generate cheat file compatible with CWCHEAT for the altered titles."
+	DE: 
+	ES: 
+	FR: "Générer le fichier cheat compatible avec CWWHEAT pour les titres modifiés."
+	IT: "Crea un file cheat compatibile con CWCHEAT per i titoli modificati."
+	
+	PT: "Definir a região do jogo para o qual serão gerados os cheats."
+	EN: "Set the game's region to which the cheats will be generated."
+	DE: 
+	ES: 
+	FR: "Définir la région du jeu avec laquelle les cheats seront générés."
+	IT: "Seleziona la regione del gioco per il quale verra generato il file cheat."
+	
+	PT: "Fazer com que os cheats sejam selecionados automaticamente pelo CWCHEAT. (os cheats serão apenas selecionados; ainda será necessário ativá-los no menu do CWCHEAT)"
+	EN: "Make the cheats to be automatically selected by CWCHEAT. (the cheats will only be selected; it will still be necessary to activate them on the CWCHEAT menu)"
+	DE: 
+	ES: 
+	FR: "Faire que les cheats soient automatiquement séléctionnés par CWCHEAT. (seulement les cheats seront séléctionnés; ce sera toujours nécessaire de l'activer dans le menu de CWCHEAT)"
+	IT: "Fai in modo che i file cheat vengano automaticamente selezionati da CWCHEAT. (i file cheat saranno solamente selezionati; sara necessario attivarli nel menu di CWCHEAT)"
+	
+	PT: "Salvar lista atual para utilização futura?"
+	EN: "Save current title list for future use?"
+	DE: 
+	ES: 
+	FR: "Sauvegarder la liste actuelle pour une utilisation future?"
+	IT: "Salva lista titoli corrente per futuri utilizzi?"
+	
+	PT: "Descartar alterações e carregar última lista salva?"
+	EN: "Discard changes and load last saved title list?"
+	DE: 
+	ES: 
+	FR: "Renoncer aux changements et charger la dernière liste sauvegardée?"
+	IT: "Annulla modifiche e carica ultimo salvataggio lista titoli?"
+	
+	PT: "Gerar arquivo de cheats para as músicas selecionadas?"
+	EN: "Generate cheat file for the altered titles?"
+	DE: 
+	ES: 
+	FR: "Générer le fichier cheat pour les musiques sélectionées?"
+	IT: "Crea file cheat per i titoli modificati?"
+	
+	PT: "Voltar nomes de todas as músicas aos seus estados originais?"
+	EN: "Reset all fields to their original state?"
+	DE: 
+	ES: 
+	FR: "Réinitialiser tout les champs à leur statut d'origine?"
+	IT: "Resetta tutti i campi al loro stato originale?"
+	
+	PT: "Sair do aplicativo?"
+	EN: "Exit application?"
+	DE: 
+	ES: 
+	FR: "Quitter l'application?"
+	IT: "Uscire dall'applicazione?"
+	
+	PT: "Você excedeu o limite de caracteres para esta música!"
+	EN: "You exceeded the maximum character limit of this title!"
+	DE: 
+	ES: 
+	FR: "Vous avez dépassé la limite de caractères pour cette musique!"
+	IT: "Hai superato il limite massimo di caratteri per questo titolo!"
+	
+	PT: "Um ou mais nomes ultrapassam o limite de caracteres. Dados importantes do jogo poderão ser sobrescritos. Continuar mesmo assim?"
+	EN: "One or more titles exceed the maximum character limit. Risk of important game data be overwritten. Continue anyway?"
+	DE: 
+	ES: 
+	FR: "Un ou plusieurs titres dépassent la limite de caractères. Il y a un risque important d'écrasement de données de jeu. Continuer tout de même?"
+	IT: "Uno o piu titoli superano il limite massimo di caratteri. Si rischia di sovrascrivere dati di gioco importanti. Continuare lo stesso?"
+	
+	PT: "Nenhuma música foi selecionada."
+	EN: "No titles have been selected."
+	DE: 
+	ES: 
+	FR: "Aucune musique n'a été sélectionnée."
+	IT: "Nessun titolo selezionato."
+	
+	PT: "O arquivo (...) não foi encontrado."
+	EN: "The file (...) was not found."
+	DE: 
+	ES: 
+	FR: "le fichier (...) n'a pas été trouvé."
+	IT: "Il file (...) non e stato trovato."
+	
+	PT: "Um erro impediu a lista de ser salva."
+	EN: "An error prevented the list from being saved."
+	DE: 
+	ES: 
+	FR: "Une erreur a empêché la liste d'être sauvegardée."
+	IT: "Un errore ha impedito il salvataggio della lista."
+	
+	PT: "Um erro impediu a lista de ser carregada."
+	EN: "An error prevented the list from being loaded."
+	DE: 
+	ES: 
+	FR: "Une erreur a empêché la liste d'être chargée."
+	IT: "Un errore ha impedito il caricamento della lista."
+	
+	PT: "O arquivo (...) é inválido ou não foi encontrado. Verifique seu download ou baixe os arquivos novamente. O aplicativo será encerrado.";
+	EN: "The file (...) is either invalid or missing. Check your download or repeat it. The application will exit."
+	DE: 
+	ES: 
+	FR: "Le fichier (...) est invalide ou manquant. Vérifiez votre téléchargement ou répétez l'action. L'application sera quittée."
+	IT: "Il file (...) e invalido o mancante. Controlla i tuoi file scaricati o ripeti. L'applicazione si chiudera."
+	
