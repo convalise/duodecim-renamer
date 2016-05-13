@@ -1,4 +1,5 @@
-package LIBRARY;
+
+package com.convalise.lib;
 
 import java.awt.Color;
 import java.awt.GradientPaint;
@@ -11,24 +12,28 @@ import javax.swing.JButton;
 
 public class GradientButton extends JButton {
 
-	private Color StartColor;
-	private Color EndColor;
-	private Color BorderColor;
+	public static final Color DEFAULT_START_COLOR = Color.WHITE;
+	public static final Color DEFAULT_END_COLOR = new Color(185, 210, 230);
+	public static final Color DEFAULT_BORDER_COLOR = new Color(122, 138, 153);
+
+	private Color startColor;
+	private Color endColor;
+	private Color borderColor;
 
 	private boolean isHovered;
 
 	public GradientButton() {
-		this(Color.WHITE, new Color(185, 210, 230), new Color(120, 140, 155));
+		this(DEFAULT_START_COLOR, DEFAULT_END_COLOR);
 	}
 
-	public GradientButton(Color StartColor, Color EndColor) {
-		this(StartColor, EndColor, new Color(122, 138, 153));
+	public GradientButton(Color startColor, Color endColor) {
+		this(startColor, endColor, DEFAULT_BORDER_COLOR);
 	}
 
-	public GradientButton(Color StartColor, Color EndColor, Color BorderColor) {
-		this.StartColor = StartColor;
-		this.EndColor = EndColor;
-		this.BorderColor = BorderColor;
+	public GradientButton(Color startColor, Color endColor, Color borderColor) {
+		this.startColor = startColor;
+		this.endColor = endColor;
+		this.borderColor = borderColor;
 		this.isHovered = false;
 	}
 
@@ -36,69 +41,79 @@ public class GradientButton extends JButton {
 		this(Button.getGradientStartColor(), Button.getGradientEndColor(), Button.getGradientBorderColor());
 	}
 
-	public void setGradientColors(Color StartColor, Color EndColor, Color BorderColor) {
-		this.StartColor = StartColor;
-		this.EndColor = EndColor;
-		this.BorderColor = BorderColor;
+	public void setGradientStartColor(Color startColor) {
+		this.startColor = startColor;
 	}
 
-	public void setGradientDefaultColors() {
-		this.StartColor = Color.WHITE;
-		this.EndColor = new Color(185, 210, 230);
-		this.BorderColor = new Color(120, 140, 155);
+	public void setGradientEndColor(Color endColor) {
+		this.endColor = endColor;
 	}
 
-	public void setHovered(boolean isHovered) {
+	public void setGradientBorderColor(Color borderColor) {
+		this.borderColor = borderColor;
+	}
+
+	public void setButtonHovered(boolean isHovered) {
 		this.isHovered = isHovered;
 	}
 
 	public Color getGradientStartColor() {
-		return this.StartColor;
+		return this.startColor;
 	}
 
 	public Color getGradientEndColor() {
-		return this.EndColor;
+		return this.endColor;
 	}
 
 	public Color getGradientBorderColor() {
-		return this.BorderColor;
+		return this.borderColor;
 	}
 
-	public boolean getHovered() {
+	public boolean getButtonHovered() {
 		return this.isHovered;
+	}
+
+	public void setGradientColors(Color startColor, Color endColor) {
+		setGradientStartColor(startColor);
+		setGradientEndColor(endColor);
+	}
+	
+	public void setGradientColors(Color startColor, Color endColor, Color borderColor) {
+		setGradientColors(startColor, endColor);
+		setGradientBorderColor(borderColor);
 	}
 
 	@Override
 	public void paintComponent(Graphics g) {
 
-		float StartX = 0;
-		float StartY = (0.3f)*getHeight();
-		float EndX = 0;
-		float EndY = getHeight();
+		float startX = 0;
+		float startY = super.getHeight() * 0.3f;
+		float endX = 0;
+		float endY = super.getHeight();
 
-		Point2D StartPoint = new Point2D.Float(StartX, StartY);
-		Point2D EndPoint = new Point2D.Float(EndX, EndY);
+		Point2D paintStartPoint = new Point2D.Float(startX, startY);
+		Point2D paintEndPoint = new Point2D.Float(endX, endY);
 
 		Graphics2D g2D = (Graphics2D) g.create();
 
-		g2D.setPaint(new GradientPaint(StartPoint, StartColor, EndPoint, EndColor, true));
-		g2D.fill(new Rectangle2D.Double(0, 0, getWidth(), getHeight()));
+		g2D.setPaint(new GradientPaint(paintStartPoint, startColor, paintEndPoint, endColor, true));
+		g2D.fill(new Rectangle2D.Double(0, 0, super.getWidth(), super.getHeight()));
 
-		setBackground(new Color(0, 0, 0, 0));
-		setBorderPainted(true);
-
+		this.setBackground(new Color(0, 0, 0, 0));
+		this.setBorderPainted(true);
 
 		if(isHovered) {
 
-			setBorderPainted(false);
-			//Color[] cores = {  new Color(0, 0, 0, 0), new Color(0, 0, 0, 50) };
-			Color[] cores = {  new Color(0, 0, 0, 0), Color.WHITE };
-			float[] floats = { 0.6f, 1.0f };
-			g2D.setPaint(new RadialGradientPaint(new Point2D.Float(getWidth()/2, getHeight()/2), getWidth()/2, floats, cores));
-			//g2D.setPaint(new GradientPaint(StartPoint, new Color(0, 0, 0, 150), EndPoint, EndColor, true));
-			g2D.fill(new Rectangle2D.Double(0, 0, getWidth(), getHeight()));
+			this.setBorderPainted(false);
+			
+			Color[] colors = { new Color(0, 0, 0, 0), Color.WHITE };
+			float[] fractions = { 0.6f, 1.0f };
+			
+			g2D.setPaint(new RadialGradientPaint(new Point2D.Float(super.getWidth() / 2, super.getHeight() / 2), super.getWidth() / 2, fractions, colors));
+			g2D.fill(new Rectangle2D.Double(0, 0, super.getWidth(), super.getHeight()));
 
 		}
+		
 		super.paintComponent(g);
 
 		g2D.dispose();
@@ -111,9 +126,8 @@ public class GradientButton extends JButton {
 
 		Graphics2D g2D = (Graphics2D) g.create();
 
-		g2D.setColor(BorderColor);
-		g2D.drawRect(0, 0, getWidth()-1, getHeight()-1);
-
+		g2D.setColor(borderColor);
+		g2D.drawRect(0, 0, super.getWidth() - 1, super.getHeight() - 1);
 		g2D.dispose();
 
 	}

@@ -4,22 +4,22 @@
   <NonVisualComponents>
     <Menu class="javax.swing.JMenuBar" name="MB_MenuBar">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="M_Funcoes">
+        <Menu class="javax.swing.JMenu" name="M_Functions">
           <Properties>
-            <Property name="text" type="java.lang.String" value="M_Funcoes"/>
+            <Property name="text" type="java.lang.String" value="M_Functions"/>
           </Properties>
           <Events>
-            <EventHandler event="menuSelected" listener="javax.swing.event.MenuListener" parameters="javax.swing.event.MenuEvent" handler="M_FuncoesMenuSelected"/>
-            <EventHandler event="menuDeselected" listener="javax.swing.event.MenuListener" parameters="javax.swing.event.MenuEvent" handler="M_FuncoesMenuDeselected"/>
+            <EventHandler event="menuSelected" listener="javax.swing.event.MenuListener" parameters="javax.swing.event.MenuEvent" handler="M_FunctionsMenuSelected"/>
+            <EventHandler event="menuDeselected" listener="javax.swing.event.MenuListener" parameters="javax.swing.event.MenuEvent" handler="M_FunctionsMenuDeselected"/>
           </Events>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="MI_Exportar">
+            <MenuItem class="javax.swing.JMenuItem" name="MI_Export">
               <Properties>
-                <Property name="text" type="java.lang.String" value="MI_Exportar"/>
+                <Property name="text" type="java.lang.String" value="MI_Export"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_ExportarMouseEntered"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_ExportarActionPerformed"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_ExportMouseEntered"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_ExportActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="MI_Save">
@@ -51,12 +51,12 @@
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="S_Separator_1">
             </MenuItem>
-            <Menu class="javax.swing.JMenu" name="M_Idioma">
+            <Menu class="javax.swing.JMenu" name="M_Idiom">
               <Properties>
-                <Property name="text" type="java.lang.String" value="M_Idioma"/>
+                <Property name="text" type="java.lang.String" value="M_Idiom"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="M_IdiomaMouseEntered"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="M_IdiomMouseEntered"/>
               </Events>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="MI_Portugues">
@@ -80,6 +80,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="MI_Deutsch">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="MI_Deutsch"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
                     <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_DeutschMouseEntered"/>
@@ -89,6 +90,7 @@
                 <MenuItem class="javax.swing.JMenuItem" name="MI_Espanol">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="MI_Espanol"/>
+                    <Property name="enabled" type="boolean" value="false"/>
                   </Properties>
                   <Events>
                     <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_EspanolMouseEntered"/>
@@ -143,70 +145,70 @@
                 </MenuItem>
               </SubComponents>
             </Menu>
-            <Menu class="javax.swing.JMenu" name="M_Tema">
+            <Menu class="javax.swing.JMenu" name="M_Theme">
               <Properties>
-                <Property name="text" type="java.lang.String" value="M_Tema"/>
+                <Property name="text" type="java.lang.String" value="M_Theme"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="M_TemaMouseEntered"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="M_ThemeMouseEntered"/>
               </Events>
               <SubComponents>
-                <MenuItem class="javax.swing.JMenuItem" name="MI_Tema_Default">
+                <MenuItem class="javax.swing.JMenuItem" name="MI_Theme_Default">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="MI_Tema_Default"/>
+                    <Property name="text" type="java.lang.String" value="MI_Theme_Default"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_Tema_DefaultMouseEntered"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_Tema_DefaultActionPerformed"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_Theme_DefaultMouseEntered"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_Theme_DefaultActionPerformed"/>
                   </Events>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="MI_Tema_Dark">
+                <MenuItem class="javax.swing.JMenuItem" name="MI_Theme_Dark">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="MI_Tema_Dark"/>
+                    <Property name="text" type="java.lang.String" value="MI_Theme_Dark"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_Tema_DarkMouseEntered"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_Tema_DarkActionPerformed"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_Theme_DarkMouseEntered"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_Theme_DarkActionPerformed"/>
                   </Events>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="MI_Tema_Cosmos">
+                <MenuItem class="javax.swing.JMenuItem" name="MI_Theme_Cosmos">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="MI_Tema_Cosmos"/>
+                    <Property name="text" type="java.lang.String" value="MI_Theme_Cosmos"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_Tema_CosmosMouseEntered"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_Tema_CosmosActionPerformed"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_Theme_CosmosMouseEntered"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_Theme_CosmosActionPerformed"/>
                   </Events>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="MI_Tema_Chaos">
+                <MenuItem class="javax.swing.JMenuItem" name="MI_Theme_Chaos">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="MI_Tema_Chaos"/>
+                    <Property name="text" type="java.lang.String" value="MI_Theme_Chaos"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_Tema_ChaosMouseEntered"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_Tema_ChaosActionPerformed"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_Theme_ChaosMouseEntered"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_Theme_ChaosActionPerformed"/>
                   </Events>
                 </MenuItem>
-                <MenuItem class="javax.swing.JMenuItem" name="MI_Tema_Custom">
+                <MenuItem class="javax.swing.JMenuItem" name="MI_Theme_Custom">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="MI_Tema_Custom"/>
+                    <Property name="text" type="java.lang.String" value="MI_Theme_Custom"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_Tema_CustomMouseEntered"/>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_Tema_CustomActionPerformed"/>
+                    <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_Theme_CustomMouseEntered"/>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_Theme_CustomActionPerformed"/>
                   </Events>
                 </MenuItem>
               </SubComponents>
             </Menu>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="S_Separator_2">
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="MI_Ajuda">
+            <MenuItem class="javax.swing.JMenuItem" name="MI_Help">
               <Properties>
-                <Property name="text" type="java.lang.String" value="MI_Ajuda"/>
+                <Property name="text" type="java.lang.String" value="MI_Help"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_AjudaMouseEntered"/>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_AjudaActionPerformed"/>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="MI_HelpMouseEntered"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MI_HelpActionPerformed"/>
               </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="MI_About">
@@ -269,7 +271,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="P_MainPanel">
+    <Container class="com.convalise.lib.GradientPanel" name="P_MainPanel">
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GradientPanel()"/>
       </AuxValues>
@@ -281,11 +283,11 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="P_Opcoes" min="-2" pref="250" max="-2" attributes="0"/>
+                          <Component id="P_Options" min="-2" pref="250" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="P_Data" min="-2" pref="250" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="B_Exportar" max="32767" attributes="0"/>
+                          <Component id="B_Export" max="32767" attributes="0"/>
                       </Group>
                       <Component id="TP_TabbedPane" alignment="0" min="-2" pref="682" max="-2" attributes="2"/>
                   </Group>
@@ -302,9 +304,9 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="P_Data" alignment="0" max="32767" attributes="1"/>
-                          <Component id="B_Exportar" alignment="0" max="32767" attributes="1"/>
+                          <Component id="B_Export" alignment="0" max="32767" attributes="1"/>
                       </Group>
-                      <Component id="P_Opcoes" max="32767" attributes="1"/>
+                      <Component id="P_Options" max="32767" attributes="1"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -325,17 +327,17 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="P_INICIO">
+            <Container class="com.convalise.lib.ImagePanel" name="P_START">
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_INICIOMouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_STARTMouseClicked"/>
               </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
               </AuxValues>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                  <JTabbedPaneConstraints tabName="P_INICIO">
-                    <Property name="tabTitle" type="java.lang.String" value="P_INICIO"/>
+                  <JTabbedPaneConstraints tabName="P_START">
+                    <Property name="tabTitle" type="java.lang.String" value="P_START"/>
                   </JTabbedPaneConstraints>
                 </Constraint>
               </Constraints>
@@ -353,7 +355,7 @@
                 </DimensionLayout>
               </Layout>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF1">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF1">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -405,7 +407,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF1_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF1_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -419,7 +421,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF1_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -710,7 +712,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF2">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF2">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -762,7 +764,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF2_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF2_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -776,7 +778,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF2_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -1024,7 +1026,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF3">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF3">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -1076,7 +1078,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF3_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF3_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1090,7 +1092,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF3_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -1338,7 +1340,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF4">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF4">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -1390,7 +1392,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF4_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF4_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1404,7 +1406,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF4_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -1652,7 +1654,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF5">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF5">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -1704,7 +1706,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF5_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF5_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -1718,7 +1720,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF5_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -1966,7 +1968,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF6">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF6">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -2018,7 +2020,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF6_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF6_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2032,7 +2034,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF6_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -2280,7 +2282,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF7">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF7">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -2332,7 +2334,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF7_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF7_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2346,7 +2348,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF7_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -2594,7 +2596,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF8">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF8">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -2646,7 +2648,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF8_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF8_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2660,7 +2662,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF8_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -2908,7 +2910,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF9">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF9">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -2960,7 +2962,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF9_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF9_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2974,7 +2976,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF9_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -3222,7 +3224,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF10">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF10">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -3274,7 +3276,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF10_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF10_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3288,7 +3290,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF10_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -3536,7 +3538,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF11">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF11">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -3588,7 +3590,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF11_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF11_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3602,7 +3604,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF11_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -3830,7 +3832,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF12">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF12">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -3882,7 +3884,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF12_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF12_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3896,7 +3898,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF12_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -4124,7 +4126,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_FF13">
+            <Container class="com.convalise.lib.GradientPanel" name="P_FF13">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -4176,7 +4178,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_FF13_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_FF13_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -4190,7 +4192,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_FF13_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -4441,7 +4443,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="P_DDFF">
+            <Container class="com.convalise.lib.GradientPanel" name="P_DDFF">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -4486,7 +4488,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="P_DDFF_PIC">
+                <Container class="com.convalise.lib.ImagePanel" name="P_DDFF_PIC">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -4500,7 +4502,7 @@
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="P_DDFF_PICMouseClicked"/>
                   </Events>
                   <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new LIBRARY.ImagePanel();"/>
+                    <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.convalise.lib.ImagePanel();"/>
                   </AuxValues>
 
                   <Layout>
@@ -4675,7 +4677,7 @@
             </Container>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="P_Opcoes">
+        <Container class="com.convalise.lib.GradientPanel" name="P_Options">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -4696,8 +4698,8 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="CB_Regiao" alignment="0" pref="226" max="32767" attributes="1"/>
-                          <Component id="CB_AutoAtivar" alignment="0" min="-2" max="-2" attributes="1"/>
+                          <Component id="CB_Region" alignment="0" pref="226" max="32767" attributes="1"/>
+                          <Component id="CB_AutoActivate" alignment="0" min="-2" max="-2" attributes="1"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -4707,38 +4709,42 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="CB_Regiao" min="-2" max="-2" attributes="0"/>
+                      <Component id="CB_Region" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="CB_AutoAtivar" min="-2" max="-2" attributes="0"/>
+                      <Component id="CB_AutoActivate" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JComboBox" name="CB_Regiao">
+            <Component class="javax.swing.JComboBox" name="CB_Region">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="1">
-                    <StringItem index="0" value="CB_Regiao"/>
+                    <StringItem index="0" value="CB_Region"/>
                   </StringArray>
                 </Property>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Default Cursor"/>
                 </Property>
               </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JComboBox&lt;String&gt;()"/>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="CB_AutoAtivar">
+            <Component class="javax.swing.JCheckBox" name="CB_AutoActivate">
               <Properties>
-                <Property name="text" type="java.lang.String" value="CB_AutoAtivar"/>
+                <Property name="text" type="java.lang.String" value="CB_AutoActivate"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CB_AutoAtivarActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CB_AutoActivateActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="P_Data">
+        <Container class="com.convalise.lib.GradientPanel" name="P_Data">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -4779,7 +4785,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="B_Save">
+            <Component class="com.convalise.lib.GradientButton" name="B_Save">
               <Properties>
                 <Property name="text" type="java.lang.String" value="B_Save"/>
               </Properties>
@@ -4792,7 +4798,7 @@
                 <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GradientButton();"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="B_Load">
+            <Component class="com.convalise.lib.GradientButton" name="B_Load">
               <Properties>
                 <Property name="text" type="java.lang.String" value="B_Load"/>
               </Properties>
@@ -4807,17 +4813,17 @@
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JButton" name="B_Exportar">
+        <Component class="com.convalise.lib.GradientButton" name="B_Export">
           <Properties>
-            <Property name="text" type="java.lang.String" value="B_Exportar"/>
+            <Property name="text" type="java.lang.String" value="B_Export"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="B_ExportarMouseEntered"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="B_ExportarMouseExited"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_ExportarActionPerformed"/>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="B_ExportMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="B_ExportMouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="B_ExportActionPerformed"/>
           </Events>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GradientButton();"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new GradientButton()"/>
           </AuxValues>
         </Component>
       </SubComponents>

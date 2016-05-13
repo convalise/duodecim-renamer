@@ -1,4 +1,5 @@
-package DATABASE;
+
+package com.convalise.duodecimrenamer.database;
 
 /*
 ------------------------------------
@@ -13,14 +14,11 @@ package DATABASE;
 
 public abstract class MessageDB {
 
-	public static final int IDIOMA_PT = 0;
-	public static final int IDIOMA_EN = 1;
-	public static final int IDIOMA_DE = 2;
-	public static final int IDIOMA_ES = 3;
-	public static final int IDIOMA_FR = 4;
-	public static final int IDIOMA_IT = 5;
+	public enum Language {
+		PT, EN, DE, ES, FR, IT;
+	}
 
-	public static final String TITLE_FRAME = "Doudecim BGM Cheat Generator 1.2";
+	public static final String TITLE_FRAME = "Doudecim BGM Cheat Generator 1.2.1";
 	public static final String TITLE_MI_PORTUGUES = "Português";
 	public static final String TITLE_MI_ENGLISH = "English";
 	public static final String TITLE_MI_DEUTSCH = "Deutsch";
@@ -56,19 +54,19 @@ public abstract class MessageDB {
 	public static final String TITLE_TP_0_FR = "Commencement";
 	public static final String TITLE_TP_0_IT = "Inizio";
 	
-	public static final String TITLE_M_Funcoes_PT = "MENU";
-	public static final String TITLE_M_Funcoes_EN = "MENU";
-	public static final String TITLE_M_Funcoes_DE = "";
-	public static final String TITLE_M_Funcoes_ES = "";
-	public static final String TITLE_M_Funcoes_FR = "MENU";
-	public static final String TITLE_M_Funcoes_IT = "MENU";
+	public static final String TITLE_M_Functions_PT = "MENU";
+	public static final String TITLE_M_Functions_EN = "MENU";
+	public static final String TITLE_M_Functions_DE = "";
+	public static final String TITLE_M_Functions_ES = "";
+	public static final String TITLE_M_Functions_FR = "MENU";
+	public static final String TITLE_M_Functions_IT = "MENU";
 	
-	public static final String TITLE_M_Idioma_PT = "Idioma";
-	public static final String TITLE_M_Idioma_EN = "Language";
-	public static final String TITLE_M_Idioma_DE = "";
-	public static final String TITLE_M_Idioma_ES = "";
-	public static final String TITLE_M_Idioma_FR = "Langue";
-	public static final String TITLE_M_Idioma_IT = "Lingua";
+	public static final String TITLE_M_Idiom_PT = "Idioma";
+	public static final String TITLE_M_Idiom_EN = "Language";
+	public static final String TITLE_M_Idiom_DE = "";
+	public static final String TITLE_M_Idiom_ES = "";
+	public static final String TITLE_M_Idiom_FR = "Langue";
+	public static final String TITLE_M_Idiom_IT = "Lingua";
 	
 	public static final String TITLE_M_Tema_PT = "Tema";
 	public static final String TITLE_M_Tema_EN = "Theme";
@@ -84,12 +82,12 @@ public abstract class MessageDB {
 	public static final String TITLE_M_Audio_FR = "SFX";
 	public static final String TITLE_M_Audio_IT = "SFX";
 	
-	public static final String TITLE_MI_Exportar_PT = "Exportar cheats";
-	public static final String TITLE_MI_Exportar_EN = "Export cheats";
-	public static final String TITLE_MI_Exportar_DE = "";
-	public static final String TITLE_MI_Exportar_ES = "";
-	public static final String TITLE_MI_Exportar_FR = "Exporter des cheats";
-	public static final String TITLE_MI_Exportar_IT = "Esportazione file cheats";
+	public static final String TITLE_MI_Export_PT = "Exportar cheats";
+	public static final String TITLE_MI_Export_EN = "Export cheats";
+	public static final String TITLE_MI_Export_DE = "";
+	public static final String TITLE_MI_Export_ES = "";
+	public static final String TITLE_MI_Export_FR = "Exporter des cheats";
+	public static final String TITLE_MI_Export_IT = "Esportazione file cheats";
 	
 	public static final String TITLE_MI_Reset_PT = "Redefinir lista";
 	public static final String TITLE_MI_Reset_EN = "Reset fields";
@@ -112,12 +110,12 @@ public abstract class MessageDB {
 	public static final String TITLE_MI_Load_FR = "Charger la liste sauvegardée";
 	public static final String TITLE_MI_Load_IT = "Carica ultima lista salvata";
 	
-	public static final String TITLE_MI_Ajuda_PT = "Ajuda";
-	public static final String TITLE_MI_Ajuda_EN = "Help";
-	public static final String TITLE_MI_Ajuda_DE = "";
-	public static final String TITLE_MI_Ajuda_ES = "";
-	public static final String TITLE_MI_Ajuda_FR = "Aide";
-	public static final String TITLE_MI_Ajuda_IT = "Aiuto";
+	public static final String TITLE_MI_Help_PT = "Ajuda";
+	public static final String TITLE_MI_Help_EN = "Help";
+	public static final String TITLE_MI_Help_DE = "";
+	public static final String TITLE_MI_Help_ES = "";
+	public static final String TITLE_MI_Help_FR = "Aide";
+	public static final String TITLE_MI_Help_IT = "Aiuto";
 	
 	public static final String TITLE_MI_About_PT = "Sobre...";
 	public static final String TITLE_MI_About_EN = "About...";
@@ -133,40 +131,40 @@ public abstract class MessageDB {
 	public static final String TITLE_MI_Exit_FR = "QUITTER";
 	public static final String TITLE_MI_Exit_IT = "ESCI";
 	
-	public static final String TITLE_MI_Tema_Default_PT = "Padrão";
-	public static final String TITLE_MI_Tema_Default_EN = "Default";
-	public static final String TITLE_MI_Tema_Default_DE = "";
-	public static final String TITLE_MI_Tema_Default_ES = "";
-	public static final String TITLE_MI_Tema_Default_FR = "Défaut";
-	public static final String TITLE_MI_Tema_Default_IT = "Predefinito";
+	public static final String TITLE_MI_Theme_Default_PT = "Padrão";
+	public static final String TITLE_MI_Theme_Default_EN = "Default";
+	public static final String TITLE_MI_Theme_Default_DE = "";
+	public static final String TITLE_MI_Theme_Default_ES = "";
+	public static final String TITLE_MI_Theme_Default_FR = "Défaut";
+	public static final String TITLE_MI_Theme_Default_IT = "Predefinito";
 	
-	public static final String TITLE_MI_Tema_Dark_PT = "Escuro";
-	public static final String TITLE_MI_Tema_Dark_EN = "Dark";
-	public static final String TITLE_MI_Tema_Dark_DE = "";
-	public static final String TITLE_MI_Tema_Dark_ES = "";
-	public static final String TITLE_MI_Tema_Dark_FR = "Sombre";
-	public static final String TITLE_MI_Tema_Dark_IT = "Buio";
+	public static final String TITLE_MI_Theme_Dark_PT = "Escuro";
+	public static final String TITLE_MI_Theme_Dark_EN = "Dark";
+	public static final String TITLE_MI_Theme_Dark_DE = "";
+	public static final String TITLE_MI_Theme_Dark_ES = "";
+	public static final String TITLE_MI_Theme_Dark_FR = "Sombre";
+	public static final String TITLE_MI_Theme_Dark_IT = "Buio";
 	
-	public static final String TITLE_MI_Tema_Cosmos_PT = "Cosmos";
-	public static final String TITLE_MI_Tema_Cosmos_EN = "Cosmos";
-	public static final String TITLE_MI_Tema_Cosmos_DE = "";
-	public static final String TITLE_MI_Tema_Cosmos_ES = "";
-	public static final String TITLE_MI_Tema_Cosmos_FR = "Cosmos";
-	public static final String TITLE_MI_Tema_Cosmos_IT = "Cosmos";
+	public static final String TITLE_MI_Theme_Cosmos_PT = "Cosmos";
+	public static final String TITLE_MI_Theme_Cosmos_EN = "Cosmos";
+	public static final String TITLE_MI_Theme_Cosmos_DE = "";
+	public static final String TITLE_MI_Theme_Cosmos_ES = "";
+	public static final String TITLE_MI_Theme_Cosmos_FR = "Cosmos";
+	public static final String TITLE_MI_Theme_Cosmos_IT = "Cosmos";
 	
-	public static final String TITLE_MI_Tema_Chaos_PT = "Chaos";
-	public static final String TITLE_MI_Tema_Chaos_EN = "Chaos";
-	public static final String TITLE_MI_Tema_Chaos_DE = "";
-	public static final String TITLE_MI_Tema_Chaos_ES = "";
-	public static final String TITLE_MI_Tema_Chaos_FR = "Chaos";
-	public static final String TITLE_MI_Tema_Chaos_IT = "Chaos";
+	public static final String TITLE_MI_Theme_Chaos_PT = "Chaos";
+	public static final String TITLE_MI_Theme_Chaos_EN = "Chaos";
+	public static final String TITLE_MI_Theme_Chaos_DE = "";
+	public static final String TITLE_MI_Theme_Chaos_ES = "";
+	public static final String TITLE_MI_Theme_Chaos_FR = "Chaos";
+	public static final String TITLE_MI_Theme_Chaos_IT = "Chaos";
 	
-	public static final String TITLE_MI_Tema_Custom_PT = "Personalizado";
-	public static final String TITLE_MI_Tema_Custom_EN = "Custom";
-	public static final String TITLE_MI_Tema_Custom_DE = "";
-	public static final String TITLE_MI_Tema_Custom_ES = "";
-	public static final String TITLE_MI_Tema_Custom_FR = "Personnaliser";
-	public static final String TITLE_MI_Tema_Custom_IT = "Personalizzato";
+	public static final String TITLE_MI_Theme_Custom_PT = "Personalizado";
+	public static final String TITLE_MI_Theme_Custom_EN = "Custom";
+	public static final String TITLE_MI_Theme_Custom_DE = "";
+	public static final String TITLE_MI_Theme_Custom_ES = "";
+	public static final String TITLE_MI_Theme_Custom_FR = "Personnaliser";
+	public static final String TITLE_MI_Theme_Custom_IT = "Personalizzato";
 	
 	public static final String TITLE_MI_Audio_ON_PT = "Habilitado";
 	public static final String TITLE_MI_Audio_ON_EN = "Enabled";
@@ -182,12 +180,12 @@ public abstract class MessageDB {
 	public static final String TITLE_MI_Audio_OFF_FR = "Muet";
 	public static final String TITLE_MI_Audio_OFF_IT = "Muto";
 	
-	public static final String TITLE_B_Exportar_PT = "EXPORTAR";
-	public static final String TITLE_B_Exportar_EN = "EXPORT";
-	public static final String TITLE_B_Exportar_DE = "";
-	public static final String TITLE_B_Exportar_ES = "";
-	public static final String TITLE_B_Exportar_FR = "EXPORTER";
-	public static final String TITLE_B_Exportar_IT = "ESPORTA";
+	public static final String TITLE_B_Export_PT = "EXPORTAR";
+	public static final String TITLE_B_Export_EN = "EXPORT";
+	public static final String TITLE_B_Export_DE = "";
+	public static final String TITLE_B_Export_ES = "";
+	public static final String TITLE_B_Export_FR = "EXPORTER";
+	public static final String TITLE_B_Export_IT = "ESPORTA";
 	
 	public static final String TITLE_B_Save_PT = "Salvar lista atual";
 	public static final String TITLE_B_Save_EN = "Save current list";
@@ -203,34 +201,48 @@ public abstract class MessageDB {
 	public static final String TITLE_B_Load_FR = "Charger la liste sauvegardée";
 	public static final String TITLE_B_Load_IT = "Carica ultima lista salvata";
 	
-	public static final String TITLE_CB_Regiao_USA_PT = "ULUS-10566 (versão americana)";
-	public static final String TITLE_CB_Regiao_USA_EN = "ULUS-10566 (american version)";
-	public static final String TITLE_CB_Regiao_USA_DE = "ULUS-10566 ()";
-	public static final String TITLE_CB_Regiao_USA_ES = "ULUS-10566 ()";
-	public static final String TITLE_CB_Regiao_USA_FR = "ULUS-10566 (version américaine)";
-	public static final String TITLE_CB_Regiao_USA_IT = "ULUS-10566 (versione americana)";
+	public static final String TITLE_CB_Region_USA_PT = "ULUS-10566 (versão americana)";
+	public static final String TITLE_CB_Region_USA_EN = "ULUS-10566 (american version)";
+	public static final String TITLE_CB_Region_USA_DE = "ULUS-10566 ()";
+	public static final String TITLE_CB_Region_USA_ES = "ULUS-10566 ()";
+	public static final String TITLE_CB_Region_USA_FR = "ULUS-10566 (version américaine)";
+	public static final String TITLE_CB_Region_USA_IT = "ULUS-10566 (versione americana)";
 	
-	public static final String TITLE_CB_Regiao_EUR_PT = "ULES-01505 (versão européia)";
-	public static final String TITLE_CB_Regiao_EUR_EN = "ULES-01505 (european version)";
-	public static final String TITLE_CB_Regiao_EUR_DE = "ULES-01505 ()";
-	public static final String TITLE_CB_Regiao_EUR_ES = "ULES-01505 ()";
-	public static final String TITLE_CB_Regiao_EUR_FR = "ULES-01505 (version européenne)";
-	public static final String TITLE_CB_Regiao_EUR_IT = "ULES-01505 (versione europea)";
+	public static final String TITLE_CB_Region_EUR_PT = "ULES-01505 (versão européia)";
+	public static final String TITLE_CB_Region_EUR_EN = "ULES-01505 (european version)";
+	public static final String TITLE_CB_Region_EUR_DE = "ULES-01505 ()";
+	public static final String TITLE_CB_Region_EUR_ES = "ULES-01505 ()";
+	public static final String TITLE_CB_Region_EUR_FR = "ULES-01505 (version européenne)";
+	public static final String TITLE_CB_Region_EUR_IT = "ULES-01505 (versione europea)";
 	
-	public static final String TITLE_CB_Regiao_JPN_PT = "NPJH-50377 (versão japonesa)";
-	public static final String TITLE_CB_Regiao_JPN_EN = "NPJH-50377 (japanese version)";
-	public static final String TITLE_CB_Regiao_JPN_DE = "NPJH-50377 ()";
-	public static final String TITLE_CB_Regiao_JPN_ES = "NPJH-50377 ()";
-	public static final String TITLE_CB_Regiao_JPN_FR = "NPJH-50377 (version japonaise)";
-	public static final String TITLE_CB_Regiao_JPN_IT = "NPJH-50377 (versione giapponese)";
+	public static final String TITLE_CB_Region_JPN_PT = "NPJH-50377 (versão japonesa)";
+	public static final String TITLE_CB_Region_JPN_EN = "NPJH-50377 (japanese version)";
+	public static final String TITLE_CB_Region_JPN_DE = "NPJH-50377 ()";
+	public static final String TITLE_CB_Region_JPN_ES = "NPJH-50377 ()";
+	public static final String TITLE_CB_Region_JPN_FR = "NPJH-50377 (version japonaise)";
+	public static final String TITLE_CB_Region_JPN_IT = "NPJH-50377 (versione giapponese)";
 	
-	public static final String TITLE_CB_AutoAtivar_PT = "Cheats selecionados por padrão";
-	public static final String TITLE_CB_AutoAtivar_EN = "Cheats selected by default";
-	public static final String TITLE_CB_AutoAtivar_DE = "";
-	public static final String TITLE_CB_AutoAtivar_ES = "";
-	public static final String TITLE_CB_AutoAtivar_FR = "Cheats séléctionnés par défaut";
-	public static final String TITLE_CB_AutoAtivar_IT = "Cheats predefiniti";
+	public static final String TITLE_CB_AutoActivate_PT = "Cheats selecionados por padrão";
+	public static final String TITLE_CB_AutoActivate_EN = "Cheats selected by default";
+	public static final String TITLE_CB_AutoActivate_DE = "";
+	public static final String TITLE_CB_AutoActivate_ES = "";
+	public static final String TITLE_CB_AutoActivate_FR = "Cheats séléctionnés par défaut";
+	public static final String TITLE_CB_AutoActivate_IT = "Cheats predefiniti";
 
+	public static final String MESSAGE_YES_PT = "Sim";
+	public static final String MESSAGE_YES_EN = "Yes";
+	public static final String MESSAGE_YES_DE = "Ja";
+	public static final String MESSAGE_YES_ES = "Si";
+	public static final String MESSAGE_YES_FR = "Oui";
+	public static final String MESSAGE_YES_IT = "Si";
+	
+	public static final String MESSAGE_NO_PT = "Não";
+	public static final String MESSAGE_NO_EN = "No";
+	public static final String MESSAGE_NO_DE = "Nicht";
+	public static final String MESSAGE_NO_ES = "No";
+	public static final String MESSAGE_NO_FR = "Non";
+	public static final String MESSAGE_NO_IT = "Non";
+	
 	public static final String MESSAGE_SUCCESS_SAVECOMPLETE_PT = "Lista salva com sucesso!";
 	public static final String MESSAGE_SUCCESS_SAVECOMPLETE_EN = "The title list was successfully saved!";
 	public static final String MESSAGE_SUCCESS_SAVECOMPLETE_DE = "";
@@ -294,16 +306,16 @@ public abstract class MessageDB {
 	public static final String MESSAGE_INFORMATION_TIP_REGION_FR = "Définir la région du jeu avec laquelle les cheats seront générés.";
 	public static final String MESSAGE_INFORMATION_TIP_REGION_IT = "Seleziona la regione del gioco per il quale verra generato il file cheat.";
 	
-	public static final String MESSAGE_INFORMATION_TIP_AUTOACTIVATE_PT = "<html><center>Faz com que os cheats sejam selecionados automaticamente pelo <b>CWCHEAT</b>.<br>"
-			+ "(os cheats serão apenas selecionados; ainda será necessário ativá-los no menu do <b>CWCHEAT</b>.)</center></html>";
-	public static final String MESSAGE_INFORMATION_TIP_AUTOACTIVATE_EN = "<html><center>Makes the cheats to be automatically selected by <b>CWCHEAT</b>.<br>"
-			+ "(the cheats will only be selected; it will still be necessary to activate them on the <b>CWCHEAT</b> menu.)</center></html>";
+	public static final String MESSAGE_INFORMATION_TIP_AUTOACTIVATE_PT = "<html>Faz com que os cheats sejam selecionados automaticamente pelo <b>CWCHEAT</b>.<br>"
+			+ "(os cheats serão apenas selecionados; ainda será necessário ativá-los no menu do <b>CWCHEAT</b>.)</html>";
+	public static final String MESSAGE_INFORMATION_TIP_AUTOACTIVATE_EN = "<html>Makes the cheats to be automatically selected by <b>CWCHEAT</b>.<br>"
+			+ "(the cheats will only be selected; it will still be necessary to activate them on the <b>CWCHEAT</b> menu.)</html>";
 	public static final String MESSAGE_INFORMATION_TIP_AUTOACTIVATE_DE = "";
 	public static final String MESSAGE_INFORMATION_TIP_AUTOACTIVATE_ES = "";
-	public static final String MESSAGE_INFORMATION_TIP_AUTOACTIVATE_FR = "<html><center>Faire que les cheats soient automatiquement séléctionnés par <b>CWCHEAT</b>.<br>"
-			+ "(seulement les cheats seront séléctionnés; ce sera toujours nécessaire de l'activer dans le menu de <b>CWCHEAT</b>.)</center></html>";
-	public static final String MESSAGE_INFORMATION_TIP_AUTOACTIVATE_IT = "<html><center>Fai in modo che i file cheat vengano automaticamente selezionati da <b>CWCHEAT</b>.<br>"
-			+ "(i file cheat saranno solamente selezionati; sara necessario attivarli nel menu di <b>CWCHEAT</b>.)</center></html>";
+	public static final String MESSAGE_INFORMATION_TIP_AUTOACTIVATE_FR = "<html>Faire que les cheats soient automatiquement séléctionnés par <b>CWCHEAT</b>.<br>"
+			+ "(seulement les cheats seront séléctionnés; ce sera toujours nécessaire de l'activer dans le menu de <b>CWCHEAT</b>.)</html>";
+	public static final String MESSAGE_INFORMATION_TIP_AUTOACTIVATE_IT = "<html>Fai in modo che i file cheat vengano automaticamente selezionati da <b>CWCHEAT</b>.<br>"
+			+ "(i file cheat saranno solamente selezionati; sara necessario attivarli nel menu di <b>CWCHEAT</b>.)</html>";
 
 	public static final String MESSAGE_QUESTION_SAVE_PT = "Salvar lista atual para utilização futura?";
 	public static final String MESSAGE_QUESTION_SAVE_EN = "Save current title list for future use?";
@@ -347,20 +359,20 @@ public abstract class MessageDB {
 	public static final String MESSAGE_WARNING_TIP_CHARACTERLIMIT_FR = "Vous avez dépassé la limite de caractères pour cette musique!";
 	public static final String MESSAGE_WARNING_TIP_CHARACTERLIMIT_IT = "Hai superato il limite massimo di caratteri per questo titolo!";
 	
-	public static final String MESSAGE_WARNING_CHARACTERLIMIT_PT = "<html><center>Um ou mais nomes ultrapassam o limite de caracteres.<br>"
-			+ "Dados importantes do jogo poderão ser sobrescritos.<br>"
-			+ "Continuar mesmo assim?</center></html>";
-	public static final String MESSAGE_WARNING_CHARACTERLIMIT_EN = "<html><center>One or more titles exceed the maximum character limit.<br>"
-			+ "Risk of important game data be overwritten.<br>"
-			+ "Continue anyway?</center></html>";
+	public static final String MESSAGE_WARNING_CHARACTERLIMIT_PT = "Um ou mais nomes ultrapassam o limite de caracteres.\n"
+			+ "Dados importantes do jogo poderão ser sobrescritos.\n"
+			+ "Continuar mesmo assim?";
+	public static final String MESSAGE_WARNING_CHARACTERLIMIT_EN = "One or more titles exceed the maximum character limit.\n"
+			+ "Risk of important game data be overwritten.\n"
+			+ "Continue anyway?";
 	public static final String MESSAGE_WARNING_CHARACTERLIMIT_DE = "";
 	public static final String MESSAGE_WARNING_CHARACTERLIMIT_ES = "";
-	public static final String MESSAGE_WARNING_CHARACTERLIMIT_FR = "<html><center>Un ou plusieurs titres dépassent la limite de caractères.<br>"
-			+ "Il y a un risque important d'écrasement de données de jeu.<br>"
-			+ "Continuer tout de même?</center></html>";
-	public static final String MESSAGE_WARNING_CHARACTERLIMIT_IT = "<html><center>Uno o piu titoli superano il limite massimo di caratteri.<br>"
-			+ "Si rischia di sovrascrivere dati di gioco importanti.<br>"
-			+ "Continuare lo stesso?</center></html>";
+	public static final String MESSAGE_WARNING_CHARACTERLIMIT_FR = "Un ou plusieurs titres dépassent la limite de caractères.\n"
+			+ "Il y a un risque important d'écrasement de données de jeu.\n"
+			+ "Continuer tout de même?";
+	public static final String MESSAGE_WARNING_CHARACTERLIMIT_IT = "Uno o piu titoli superano il limite massimo di caratteri.\n"
+			+ "Si rischia di sovrascrivere dati di gioco importanti.\n"
+			+ "Continuare lo stesso?";
 
 	public static final String MESSAGE_ERROR_MUSICNOTSELECTED_PT = "Nenhuma música foi selecionada.";
 	public static final String MESSAGE_ERROR_MUSICNOTSELECTED_EN = "No titles have been selected.";
@@ -397,19 +409,19 @@ public abstract class MessageDB {
 	public static final String MESSAGE_ERROR_LOADNOTCOMPLETE_FR = "Une erreur a empêché la liste d'être chargée.";
 	public static final String MESSAGE_ERROR_LOADNOTCOMPLETE_IT = "Un errore ha impedito il caricamento della lista.";
 	
-	public static final String MESSAGE_ERROR_INVALIDPACKFILE_PT = "<html><center>O arquivo \"RESOURCEPACK.BIN\" é inválido ou não foi encontrado.<br>"
-			+ "Verifique seu download ou baixe os arquivos novamente.<br>"
-			+ "O aplicativo será encerrado.</center></html>";
-	public static final String MESSAGE_ERROR_INVALIDPACKFILE_EN = "<html><center>The file \"RESOURCEPACK.BIN\" is either invalid or missing.<br>"
-			+ "Check your download or repeat it.<br>"
-			+ "The application will exit.</center></html>";
+	public static final String MESSAGE_ERROR_INVALIDPACKFILE_PT = "O arquivo \"RESOURCEPACK.BIN\" é inválido ou não foi encontrado.\n"
+			+ "Verifique seu download ou baixe os arquivos novamente.\n"
+			+ "O aplicativo será encerrado.";
+	public static final String MESSAGE_ERROR_INVALIDPACKFILE_EN = "The file \"RESOURCEPACK.BIN\" is either invalid or missing.\n"
+			+ "Check your download or repeat it.\n"
+			+ "The application will exit.";
 	public static final String MESSAGE_ERROR_INVALIDPACKFILE_DE = "";
 	public static final String MESSAGE_ERROR_INVALIDPACKFILE_ES = "";
-	public static final String MESSAGE_ERROR_INVALIDPACKFILE_FR = "<html><center>Le fichier \"RESOURCEPACK.BIN\" est invalide ou manquant.<br>"
-			+ "Vérifiez votre téléchargement ou répétez l'action.<br>"
-			+ "L'application sera quittée.</center></html>";
-	public static final String MESSAGE_ERROR_INVALIDPACKFILE_IT = "<html><center>Il file \"RESOURCEPACK.BIN\" e invalido o mancante.<br>"
-			+ "Controlla i tuoi file scaricati o ripeti.<br>"
-			+ "L'applicazione si chiudera.</center></html>";
+	public static final String MESSAGE_ERROR_INVALIDPACKFILE_FR = "Le fichier \"RESOURCEPACK.BIN\" est invalide ou manquant.\n"
+			+ "Vérifiez votre téléchargement ou répétez l'action.\n"
+			+ "L'application sera quittée.";
+	public static final String MESSAGE_ERROR_INVALIDPACKFILE_IT = "Il file \"RESOURCEPACK.BIN\" e invalido o mancante.\n"
+			+ "Controlla i tuoi file scaricati o ripeti.\n"
+			+ "L'applicazione si chiudera.";
 
 }

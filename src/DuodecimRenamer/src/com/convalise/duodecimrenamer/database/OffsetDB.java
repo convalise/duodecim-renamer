@@ -1,4 +1,5 @@
-package DATABASE;
+
+package com.convalise.duodecimrenamer.database;
 
 public abstract class OffsetDB {
 

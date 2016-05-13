@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
   <Properties>
@@ -24,8 +24,8 @@
           <Group type="102" attributes="0">
               <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="L_Credit_2" alignment="1" min="-2" pref="300" max="-2" attributes="0"/>
-                  <Component id="L_Credit" alignment="1" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Component id="L_Credit_eldi" alignment="1" min="-2" pref="300" max="-2" attributes="0"/>
+                  <Component id="L_Credit_conrado" alignment="1" min="-2" pref="300" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="244" max="32767" attributes="0"/>
           </Group>
@@ -35,35 +35,35 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
-              <Component id="L_Credit" min="-2" max="-2" attributes="0"/>
+              <Component id="L_Credit_conrado" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
-              <Component id="L_Credit_2" min="-2" pref="14" max="-2" attributes="0"/>
+              <Component id="L_Credit_eldi" min="-2" pref="14" max="-2" attributes="0"/>
               <EmptySpace pref="131" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JLabel" name="L_Credit">
+    <Component class="javax.swing.JLabel" name="L_Credit_conrado">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="L_Credit"/>
+        <Property name="text" type="java.lang.String" value="L_Credit_conrado"/>
       </Properties>
       <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="L_CreditMouseClicked"/>
-        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="L_CreditMouseEntered"/>
-        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="L_CreditMouseExited"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="L_Credit_conradoMouseClicked"/>
+        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="L_Credit_conradoMouseEntered"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="L_Credit_conradoMouseExited"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="L_Credit_2">
+    <Component class="javax.swing.JLabel" name="L_Credit_eldi">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="L_Credit_2"/>
+        <Property name="text" type="java.lang.String" value="L_Credit_eldi"/>
       </Properties>
       <Events>
-        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="L_Credit_2MouseClicked"/>
-        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="L_Credit_2MouseEntered"/>
-        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="L_Credit_2MouseExited"/>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="L_Credit_eldiMouseClicked"/>
+        <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="L_Credit_eldiMouseEntered"/>
+        <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="L_Credit_eldiMouseExited"/>
       </Events>
     </Component>
   </SubComponents>

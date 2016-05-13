@@ -1,8 +1,10 @@
-package INTERFACE;
 
-import DATABASE.*;
-import ENGINE.*;
-import LIBRARY.*;
+package com.convalise.duodecimrenamer.ui;
+
+import com.convalise.duodecimrenamer.database.MessageDB;
+import com.convalise.duodecimrenamer.database.ResourceDB;
+import com.convalise.duodecimrenamer.engine.ResourceManager;
+import com.convalise.lib.ImagePanel;
 
 public class HelpPanel extends ImagePanel {
 
@@ -13,28 +15,23 @@ public class HelpPanel extends ImagePanel {
 
 	}
 
-	public void setLanguage(int Idioma) {
+	public void setLanguage(MessageDB.Language language) {
 
-		switch(Idioma) {
-			case MessageDB.IDIOMA_PT:
-				setImageBackgroundAt(01, ResourceManager.GetImgFile(ResourceDB.INDEX_PIC_AJUDA_pt));
-				break;
-			case MessageDB.IDIOMA_EN:
-				setImageBackgroundAt(01, ResourceManager.GetImgFile(ResourceDB.INDEX_PIC_AJUDA_en));
-				break;
-			case MessageDB.IDIOMA_DE:
-				setImageBackgroundAt(01, ResourceManager.GetImgFile(ResourceDB.INDEX_PIC_AJUDA_de));
-				break;
-			case MessageDB.IDIOMA_ES:
-				setImageBackgroundAt(01, ResourceManager.GetImgFile(ResourceDB.INDEX_PIC_AJUDA_es));
-				break;
-			case MessageDB.IDIOMA_FR:
-				setImageBackgroundAt(01, ResourceManager.GetImgFile(ResourceDB.INDEX_PIC_AJUDA_fr));
-				break;
-			case MessageDB.IDIOMA_IT:
-				setImageBackgroundAt(01, ResourceManager.GetImgFile(ResourceDB.INDEX_PIC_AJUDA_it));
-				break;
+		int picIndex = -1;
+		
+		switch(language) {
+			case PT: picIndex = ResourceDB.INDEX_PIC_HELP_PT; break;
+			case EN: picIndex = ResourceDB.INDEX_PIC_HELP_EN; break;
+			case DE: picIndex = ResourceDB.INDEX_PIC_HELP_DE; break;
+			case ES: picIndex = ResourceDB.INDEX_PIC_HELP_ES; break;
+			case FR: picIndex = ResourceDB.INDEX_PIC_HELP_FR; break;
+			case IT: picIndex = ResourceDB.INDEX_PIC_HELP_IT; break;
 		}
+
+		if(picIndex != -1) {
+			super.setImageItemAt(1, new ImageItem(ResourceManager.loadImageResource(picIndex), 0, 0));
+		}
+		
 		repaint();
 
 	}
@@ -58,7 +55,12 @@ public class HelpPanel extends ImagePanel {
     // End of variables declaration//GEN-END:variables
 
 	private void initComponentsCustomization() {
-		setImageBackground(new java.io.File[] { ResourceManager.GetImgFile(ResourceDB.INDEX_PIC_AJUDA_01), ResourceManager.GetImgFile(ResourceDB.INDEX_PIC_AJUDA_pt) } );
+
+		super.setImageItems(new ImageItem[] {
+			new ImageItem(ResourceManager.loadImageResource(ResourceDB.INDEX_PIC_HELP_01), 0, 0),
+			new ImageItem(ResourceManager.loadImageResource(ResourceDB.INDEX_PIC_HELP_PT), 0, 0)
+		});
+		
 	}
 
 }

@@ -1,109 +1,117 @@
-package ENGINE;
+
+package com.convalise.duodecimrenamer.engine;
 
 public abstract class CheatGenerator {
 
-	private static final int REG_USA = 0;
-	private static final int REG_EUR = 1;
-	private static final int REG_JPN = 2;
+	public enum Region {
+		USA, EUR, JPN;
+	}
+	
+	public static String parseHeader(Region region) {
 
-	public static String ParseHeader(int Regiao) {
+		StringBuilder header = new StringBuilder();
 
-		StringBuffer Cabecalho;
-
-		Cabecalho = new StringBuffer("_S ");
-
-		switch(Regiao) {
-			case REG_USA: Cabecalho.append("ULUS-10566" + '\n'); break;
-			case REG_EUR: Cabecalho.append("ULES-01505" + '\n'); break;
-			case REG_JPN: Cabecalho.append("NPJH-50377" + '\n'); break;
+		header.append("_S ");
+		
+		switch(region) {
+			case USA: header.append("ULUS-10566"); break;
+			case EUR: header.append("ULES-01505"); break;
+			case JPN: header.append("NPJH-50377"); break;
 		}
 
-		Cabecalho.append("_G Dissidia 012 [duodecim]: Final Fantasy ");
-		switch(Regiao) {
-			case REG_USA: Cabecalho.append("(USA)" + '\n'); break;
-			case REG_EUR: Cabecalho.append("(EUR)" + '\n'); break;
-			case REG_JPN: Cabecalho.append("(JPN)" + '\n'); break;
+		header.append('\n');
+		header.append("_G Dissidia 012 [duodecim]: Final Fantasy ");
+		
+		switch(region) {
+			case USA: header.append("(USA)"); break;
+			case EUR: header.append("(EUR)"); break;
+			case JPN: header.append("(JPN)"); break;
 		}
+		
+		header.append('\n');
 
-		return Cabecalho.toString();
+		return header.toString();
 
 	}
 
-	public static String ParseTitle(String Offset, String NomeOriginal, String NomeNovo, boolean AutoAtivar) {
+	public static String parseTitle(String memoryOffset, String originalTitle, String newTitle, boolean autoActivate) {
 
-		int Index;
-		int Paridade;
-		int BGMOffset;
-		char LesserBit;
-		String BGMNomeOriginal;
-		StringBuffer BGMNomeNovo;
-		StringBuffer BGMCheat;
+		long longOffset = Long.parseLong(memoryOffset, 16);
+		
+		String originalTitleParsed = parseTitle(originalTitle);
+		String newTitleParsed = parseTitle(newTitle);
+		
+		StringBuilder cheatCode = new StringBuilder();
+		
+		cheatCode.append((autoActivate) ? "_C1 " : "_C0 ");
+		cheatCode.append(originalTitleParsed);
+		cheatCode.append("-");
+		cheatCode.append(newTitleParsed);
+		cheatCode.append('\n');
 
-		BGMOffset = Integer.parseInt(Offset, 16);
-		BGMNomeNovo = new StringBuffer(NomeNovo);
-		BGMNomeOriginal = ParseNomeOriginal(NomeOriginal);
-
-		BGMCheat = new StringBuffer((AutoAtivar)? "_C1 " : "_C0 ");
-		BGMCheat.append("NEW_")
-				.append(BGMNomeOriginal)
-				.append('\n');
-
-		LesserBit = Offset.charAt(7);
-		if(LesserBit == '2' || LesserBit == '6' || LesserBit == 'A' || LesserBit == 'E') {
-			BGMCheat.append("_L 0x1")
-					.append(Integer.toHexString(BGMOffset).toUpperCase())
-					.append(" 0x00")
-					.append(Integer.toHexString(BGMNomeNovo.charAt(0)).toUpperCase())
-					.append('\n');
-			BGMNomeNovo.deleteCharAt(0);
-			BGMOffset += 2;
+		char lesserBit = memoryOffset.charAt(7);
+		
+		if(lesserBit == '2' || lesserBit == '6' || lesserBit == 'A' || lesserBit == 'E') {
+			
+			cheatCode.append("_L 0x1");
+			cheatCode.append(Long.toHexString(longOffset).toUpperCase());
+			cheatCode.append(" 0x00");
+			cheatCode.append(Integer.toHexString(newTitle.charAt(0)).toUpperCase());
+			cheatCode.append('\n');
+			
+			newTitle = newTitle.substring(1);
+			longOffset += 2;
 		}
 
-		Paridade = BGMNomeNovo.length()%2;
+		int index = 0;
+		int parity = (newTitle.length() % 2);
 
-		Index = 0;
-		for(int i=0; i<(BGMNomeNovo.length()/2)+Paridade; i++) {
-			BGMCheat.append("_L 0x2")
-					.append(Integer.toHexString(BGMOffset).toUpperCase())
-					.append(" 0x00")
-					.append((Paridade==1 && i==(BGMNomeNovo.length()/2)+Paridade-1)? "00" : Integer.toHexString(BGMNomeNovo.charAt(Index+1)).toUpperCase())
-					.append("00")
-					.append(Integer.toHexString(BGMNomeNovo.charAt(Index)).toUpperCase())
-					.append('\n');
-			BGMOffset += 4;
-			Index += 2;
+		for(int i = 0; i < (newTitle.length() / 2) + parity; i++) {
+			
+			cheatCode.append("_L 0x2");
+			cheatCode.append(Long.toHexString(longOffset).toUpperCase());
+			cheatCode.append(" 0x00");
+			cheatCode.append(((parity == 1) && (i == (newTitle.length() / 2) + parity - 1)) ? "00" : Integer.toHexString(newTitle.charAt(index + 1)).toUpperCase());
+			cheatCode.append("00");
+			cheatCode.append(Integer.toHexString(newTitle.charAt(index)).toUpperCase());
+			cheatCode.append('\n');
+			
+			longOffset += 4;
+			index += 2;
 		}
 
-		if(Paridade==0)
-			BGMCheat.append("_L 0x1")
-					.append(Integer.toHexString(BGMOffset).toUpperCase())
-					.append(" 0x0000" + '\n');
+		if(parity == 0) {
+			cheatCode.append("_L 0x1");
+			cheatCode.append(Long.toHexString(longOffset).toUpperCase());
+			cheatCode.append(" 0x0000");
+			cheatCode.append('\n');
+		}
 
-		return BGMCheat.toString();
+		return cheatCode.toString();
 
 	}
 
-	private static String ParseNomeOriginal(String NomeOriginal) {
+	private static String parseTitle(String originalTitle) {
 
-		char TempChar;
-		StringBuffer NomeOriginalMod;
-
-		NomeOriginalMod = new StringBuffer(NomeOriginal);
-
-		for(int i=0; i<NomeOriginalMod.length()-1; i++)
-			if(NomeOriginalMod.charAt(i)==' ')
-				NomeOriginalMod.setCharAt(i+1, Character.toUpperCase(NomeOriginalMod.charAt(i+1)));
-
-		if(NomeOriginal.startsWith("FF"))
-			NomeOriginalMod.delete(0, NomeOriginal.indexOf(" - ")+3);
-
-		for(int i=0; i<NomeOriginalMod.length(); i++) {
-			TempChar = NomeOriginalMod.charAt(i);
-			if(TempChar==' ' || TempChar=='\'' || TempChar=='\"' || TempChar=='#' || TempChar=='&' || TempChar==':' || TempChar==',' || TempChar=='.' || TempChar=='-' || TempChar=='!')
-				NomeOriginalMod.deleteCharAt(i--);
+		StringBuilder titleMod = new StringBuilder(originalTitle);
+		
+		for(int i = 0; i < titleMod.length() - 1; i++) {
+			if(titleMod.charAt(i) == ' ') {
+				titleMod.setCharAt(i + 1, Character.toUpperCase(titleMod.charAt(i + 1)));
+			}
 		}
 
-		return NomeOriginalMod.toString();
+		if(originalTitle.startsWith("FF")) {
+			titleMod.delete(0, originalTitle.indexOf(" - ") + 3);
+		}
+
+		for(int i = 0; i < titleMod.length(); i++) {
+			if(!Character.isLetter(titleMod.charAt(i))) {
+				titleMod.deleteCharAt(i--);
+			}
+		}
+
+		return titleMod.toString();
 
 	}
 

@@ -1,8 +1,9 @@
-package INTERFACE;
 
-import DATABASE.*;
-import ENGINE.*;
-import LIBRARY.*;
+package com.convalise.duodecimrenamer.ui;
+
+import com.convalise.duodecimrenamer.database.ResourceDB;
+import com.convalise.duodecimrenamer.engine.ResourceManager;
+import com.convalise.lib.ImagePanel;
 
 public class SplashPanel extends ImagePanel {
 
@@ -45,8 +46,10 @@ public class SplashPanel extends ImagePanel {
 
 	private void initComponentsCustomization() {
 
-		setImageBackground(new java.io.File[] { ResourceManager.GetImgFile(ResourceDB.INDEX_PIC_SPLASH) } );
-
+		super.setImageItems(new ImageItem[] {
+			new ImageItem(ResourceManager.loadImageResource(ResourceDB.INDEX_PIC_SPLASH), 0, 0)
+		});
+		
 		PB_LoadBar.setForeground(java.awt.Color.WHITE);
 		PB_LoadBar.setBorderPainted(false);
 		PB_LoadBar.setIndeterminate(true);

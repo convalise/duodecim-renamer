@@ -1,4 +1,5 @@
-package LIBRARY;
+
+package com.convalise.lib;
 
 import java.awt.Color;
 import java.awt.GradientPaint;
@@ -7,128 +8,152 @@ import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
 
 public class GradientPanel extends javax.swing.JPanel {
+	
+	public static final Color DEFAULT_COLOR = new Color(238, 238, 238);
 
-	public static final Color DefaultColor = new Color(238, 238, 238);
+	public enum GradientDirection {
+		HORIZONTAL, VERTICAL, DIAGONAL, ANTIDIAGONAL;
+	}
 
-	public static final int DIR_HORIZONTAL = 0;
-	public static final int DIR_VERTICAL = 1;
-	public static final int DIR_DIAGONAL = 2;
-	public static final int DIR_DIAGONALINVERSE = 3;
-
-	private Color StartColor;
-	private Color EndColor;
-	private int Direction;
+	private Color startColor;
+	private Color endColor;
+	private GradientDirection direction;
+	
 	private boolean isTranslucent;
+	private boolean isBorderVisible;
+	private boolean isReverse;
 
 	public GradientPanel() {
-		this(DefaultColor, DefaultColor, DIR_VERTICAL, false);
+		this(DEFAULT_COLOR, DEFAULT_COLOR, GradientDirection.VERTICAL, false);
 	}
 
-	public GradientPanel(Color StartColor, Color EndColor) {
-		this(StartColor, EndColor, DIR_VERTICAL, false);
+	public GradientPanel(Color startColor, Color endColor) {
+		this(startColor, endColor, GradientDirection.VERTICAL, false);
 	}
 
-	public GradientPanel(Color StartColor, Color EndColor, int Direction) {
-		this(StartColor, EndColor, Direction, false);
+	public GradientPanel(Color startColor, Color endColor, GradientDirection direction) {
+		this(startColor, endColor, direction, false);
 	}
 
-	public GradientPanel(Color StartColor, Color EndColor, int Direction, boolean isTranslucent) {
-		this.StartColor = StartColor;
-		this.EndColor = EndColor;
-		this.Direction = Direction;
+	public GradientPanel(Color startColor, Color endColor, GradientDirection direction, boolean isTranslucent) {
+		this.startColor = startColor;
+		this.endColor = endColor;
+		this.direction = direction;
 		this.isTranslucent = isTranslucent;
 	}
 
-	public GradientPanel(GradientPanel Panel) {
-		this(Panel.getGradientStartColor(), Panel.getGradientEndColor(), Panel.getGradientDirection(), Panel.isGradientTranslucent());
+	public GradientPanel(GradientPanel other) {
+		this(other.getGradientStartColor(), other.getGradientEndColor(), other.getGradientDirection(), other.isGradientTranslucent());
+		this.isBorderVisible = other.isBorderVisible;
+		this.isReverse = other.isReverse;
 	}
 
-	public void setGradientColors(Color StartColor, Color EndColor) {
-		this.StartColor = StartColor;
-		this.EndColor = EndColor;
+	public void setGradientStartColor(Color startColor) {
+		this.startColor = startColor;
 	}
-
-	public void setGradientDirection(int Direction) {
-		this.Direction = Direction;
+	
+	public void setGradientEndColor(Color endColor) {
+		this.endColor = endColor;
+	}
+	
+	public void setGradientDirection(GradientDirection direction) {
+		this.direction = direction;
 	}
 
 	public void setGradientTranslucent(boolean isTranslucent) {
 		this.isTranslucent = isTranslucent;
 	}
 
+	public void setGradientBorderVisible(boolean isBorderVisible) {
+		this.isBorderVisible = isBorderVisible;
+	}
+
+	public void setGradientReverse(boolean isReverse) {
+		this.isReverse = isReverse;
+	}
+
 	public Color getGradientStartColor() {
-		return this.StartColor;
+		return this.startColor;
 	}
 
 	public Color getGradientEndColor() {
-		return this.EndColor;
+		return this.endColor;
 	}
 
-	public int getGradientDirection() {
-		return this.Direction;
+	public GradientDirection getGradientDirection() {
+		return this.direction;
 	}
 
 	public boolean isGradientTranslucent() {
 		return this.isTranslucent;
 	}
 
-	public void setGradientDefaultColors() {
-		this.StartColor = new Color(248, 248, 248);
-		this.EndColor = new Color(228, 228, 228);
+	public boolean isGradientBorderVisible() {
+		return this.isBorderVisible;
 	}
 
-	public void ReverseGradientColors() {
-		Color AuxColor;
-		AuxColor = StartColor;
-		StartColor = EndColor;
-		EndColor = AuxColor;
+	public boolean isGradientReverse() {
+		return this.isReverse;
+	}
+
+	public void setGradientColors(Color startColor, Color endColor) {
+		setGradientStartColor(startColor);
+		setGradientEndColor(endColor);
 	}
 
 	@Override
 	public void paintComponent(Graphics g) {
 
-		Graphics2D g2D = (Graphics2D) g.create();
-
-		if(!isTranslucent)
+		if(!isTranslucent) {
 			super.paintComponent(g);
-
-		int StartX = 0;
-		int StartY = 0;
-		int EndX = 0;
-		int EndY = 0;
-
-		switch(Direction) {
-			case DIR_HORIZONTAL:
-				StartX = 0;
-				StartY = 0;
-				EndX = getWidth();
-				EndY = 0;
-				break;
-			case DIR_VERTICAL:
-				StartX = 0;
-				StartY = 0;
-				EndX = 0;
-				EndY = getHeight();
-				break;
-			case DIR_DIAGONAL:
-				StartX = getWidth();
-				StartY = 0;
-				EndX = 0;
-				EndY = getHeight();
-				break;
-			case DIR_DIAGONALINVERSE:
-				StartX = 0;
-				StartY = 0;
-				EndX = getWidth();
-				EndY = getHeight();
-				break;
 		}
 
-		Point2D StartPoint = new Point2D.Float(StartX, StartY);
-		Point2D EndPoint = new Point2D.Float(EndX, EndY);
+		int startX = 0;
+		int startY = 0;
+		int endX = 0;
+		int endY = 0;
 
-		g2D.setPaint(new GradientPaint(StartPoint, StartColor, EndPoint, EndColor));
-		g2D.fillRect(0, 0, getWidth(), getHeight());
+		switch(direction) {
+			
+			case HORIZONTAL:
+				startX = 0;
+				startY = 0;
+				endX = super.getWidth();
+				endY = 0;
+				break;
+				
+			case VERTICAL:
+				startX = 0;
+				startY = 0;
+				endX = 0;
+				endY = super.getHeight();
+				break;
+				
+			case DIAGONAL:
+				startX = 0;
+				startY = 0;
+				endX = super.getWidth();
+				endY = super.getHeight();
+				break;
+				
+			case ANTIDIAGONAL:
+				startX = super.getWidth();
+				startY = 0;
+				endX = 0;
+				endY = super.getHeight();
+				break;
+				
+		}
+
+		Color paintStartColor = isReverse ? endColor : startColor;
+		Color paintEndColor = isReverse ? startColor : endColor;
+		
+		Point2D paintStartPoint = new Point2D.Float(startX, startY);
+		Point2D paintEndPoint = new Point2D.Float(endX, endY);
+
+		Graphics2D g2D = (Graphics2D) g.create();
+		g2D.setPaint(new GradientPaint(paintStartPoint, paintStartColor, paintEndPoint, paintEndColor));
+		g2D.fillRect(0, 0, super.getWidth(), super.getHeight());
 
 		g2D.dispose();
 
@@ -137,8 +162,18 @@ public class GradientPanel extends javax.swing.JPanel {
 	@Override
 	public void paintBorder(Graphics g) {
 
-		if(!isTranslucent)
+		if(!isBorderVisible) {
+			return;
+		}
+
+		if(!isTranslucent) {
 			super.paintBorder(g);
+		}
+
+		Graphics2D g2D = (Graphics2D) g.create();
+		g2D.setColor(Color.BLACK);
+		g2D.drawRect(0, 0, super.getWidth() - 1, super.getHeight() - 1);
+		g2D.dispose();
 
 	}
 

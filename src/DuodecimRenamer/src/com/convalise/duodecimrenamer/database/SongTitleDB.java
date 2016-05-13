@@ -1,6 +1,7 @@
-package DATABASE;
 
-public abstract class TitleDB {
+package com.convalise.duodecimrenamer.database;
+
+public abstract class SongTitleDB {
 
 	public static final String FF1_ISO_BATTLE = "FFI - Battle";
 	public static final String FF1_ISO_DUNGEON = "FFI - Dungeon";

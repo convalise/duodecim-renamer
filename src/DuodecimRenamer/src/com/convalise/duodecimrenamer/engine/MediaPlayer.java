@@ -1,6 +1,7 @@
-package ENGINE;
 
-import DATABASE.*;
+package com.convalise.duodecimrenamer.engine;
+
+import com.convalise.duodecimrenamer.database.ResourceDB;
 
 import javax.media.Manager;
 import javax.media.Player;
@@ -30,89 +31,89 @@ public abstract class MediaPlayer {
 	public static final int DISSIDIA_EQUIP			= 19;
 	public static final int DISSIDIA_UNEQUIP		= 20;
 
-	private static boolean Mute = false;
+	private static boolean isMute = false;
 
-	public static void setMute(boolean Disable) {
-		Mute = Disable;
+	public static void setMute(boolean disabled) {
+		isMute = disabled;
 	}
 
-	public static void PlayWindowsSound(int Sound) {
+	public static void playWindowsSound(int soundIndex) {
 
-		Runnable AudioRunnable;
-		String SoundName;
-
-		if(Mute)
+		if(isMute) {
 			return;
-
-		SoundName = null;
-		switch(Sound) {
-			case WINDOWS_ERROR:			SoundName = "win.sound.default";		break;
-			case WINDOWS_QUESTION:		SoundName = "win.sound.exclamation";	break;
-			case WINDOWS_INFORMATION:	SoundName = "win.sound.asterisk";		break;
 		}
 
-		AudioRunnable = (Runnable) java.awt.Toolkit.getDefaultToolkit().getDesktopProperty(SoundName);
-		if(AudioRunnable!=null)
+		String soundName = null;
+		
+		switch(soundIndex) {
+			case WINDOWS_ERROR:			soundName = "win.sound.default";		break;
+			case WINDOWS_QUESTION:		soundName = "win.sound.exclamation";	break;
+			case WINDOWS_INFORMATION:	soundName = "win.sound.asterisk";		break;
+		}
+
+		Runnable AudioRunnable = (Runnable) java.awt.Toolkit.getDefaultToolkit().getDesktopProperty(soundName);
+		if(AudioRunnable != null) {
 			AudioRunnable.run();
-
-	}
-
-	public static void PlayCustomSound(int Sound) {
-		int SoundFile;
-
-		if(Mute)
-			return;
-
-		SoundFile = -1;
-		switch(Sound) {
-			case DISSIDIA_CURSORMOVE:	SoundFile = ResourceDB.INDEX_SOUND_CURSORMOVE;		break;
-			case DISSIDIA_CURSORMOVE_2:	SoundFile = ResourceDB.INDEX_SOUND_CURSORMOVE_2;	break;
-			case DISSIDIA_CURSORMOVE_3:	SoundFile = ResourceDB.INDEX_SOUND_CURSORMOVE_3;	break;
-			case DISSIDIA_CURSORCHOOSE:	SoundFile = ResourceDB.INDEX_SOUND_CURSORCHOOSE;	break;
-			case DISSIDIA_CURSORBACK:	SoundFile = ResourceDB.INDEX_SOUND_CURSORBACK;		break;
-			case DISSIDIA_MENUOPEN:		SoundFile = ResourceDB.INDEX_SOUND_MENUOPEN;		break;
-			case DISSIDIA_MENUCLOSE:	SoundFile = ResourceDB.INDEX_SOUND_MENUCLOSE;		break;
-			case DISSIDIA_PAGEROLL:		SoundFile = ResourceDB.INDEX_SOUND_PAGEROLL;		break;
-			case DISSIDIA_PAGEROLL_2:	SoundFile = ResourceDB.INDEX_SOUND_PAGEROLL_2;		break;
-			case DISSIDIA_WINDOWUP:		SoundFile = ResourceDB.INDEX_SOUND_WINDOWUP;		break;
-			case DISSIDIA_WINDOWUP_2:	SoundFile = ResourceDB.INDEX_SOUND_WINDOWUP_2;		break;
-			case DISSIDIA_ERROR:		SoundFile = ResourceDB.INDEX_SOUND_ERROR;			break;
-			case DISSIDIA_CHOCOBO:		SoundFile = ResourceDB.INDEX_SOUND_CHOCOBO;			break;
-			case DISSIDIA_MOOGLE:		SoundFile = ResourceDB.INDEX_SOUND_MOOGLE	;		break;
-			case DISSIDIA_MOOGLE_2:		SoundFile = ResourceDB.INDEX_SOUND_MOOGLE_2;		break;
-			case DISSIDIA_STAIRS:		SoundFile = ResourceDB.INDEX_SOUND_STAIRS;			break;
-			case DISSIDIA_EQUIP:		SoundFile = ResourceDB.INDEX_SOUND_EQUIP;			break;
-			case DISSIDIA_UNEQUIP:		SoundFile = ResourceDB.INDEX_SOUND_UNEQUIP;			break;
 		}
 
-		if(SoundFile!=-1)
-			new PlayerThread(SoundFile).start();
+	}
+
+	public static void playCustomSound(int soundIndex) {
+
+		if(isMute) {
+			return;
+		}
+
+		int resourceIndex = -1;
+		
+		switch(soundIndex) {
+			case DISSIDIA_CURSORMOVE:	resourceIndex = ResourceDB.INDEX_SOUND_CURSORMOVE;		break;
+			case DISSIDIA_CURSORMOVE_2:	resourceIndex = ResourceDB.INDEX_SOUND_CURSORMOVE_2;	break;
+			case DISSIDIA_CURSORMOVE_3:	resourceIndex = ResourceDB.INDEX_SOUND_CURSORMOVE_3;	break;
+			case DISSIDIA_CURSORCHOOSE:	resourceIndex = ResourceDB.INDEX_SOUND_CURSORCHOOSE;	break;
+			case DISSIDIA_CURSORBACK:	resourceIndex = ResourceDB.INDEX_SOUND_CURSORBACK;		break;
+			case DISSIDIA_MENUOPEN:		resourceIndex = ResourceDB.INDEX_SOUND_MENUOPEN;		break;
+			case DISSIDIA_MENUCLOSE:	resourceIndex = ResourceDB.INDEX_SOUND_MENUCLOSE;		break;
+			case DISSIDIA_PAGEROLL:		resourceIndex = ResourceDB.INDEX_SOUND_PAGEROLL;		break;
+			case DISSIDIA_PAGEROLL_2:	resourceIndex = ResourceDB.INDEX_SOUND_PAGEROLL_2;		break;
+			case DISSIDIA_WINDOWUP:		resourceIndex = ResourceDB.INDEX_SOUND_WINDOWUP;		break;
+			case DISSIDIA_WINDOWUP_2:	resourceIndex = ResourceDB.INDEX_SOUND_WINDOWUP_2;		break;
+			case DISSIDIA_ERROR:		resourceIndex = ResourceDB.INDEX_SOUND_ERROR;			break;
+			case DISSIDIA_CHOCOBO:		resourceIndex = ResourceDB.INDEX_SOUND_CHOCOBO;			break;
+			case DISSIDIA_MOOGLE:		resourceIndex = ResourceDB.INDEX_SOUND_MOOGLE	;		break;
+			case DISSIDIA_MOOGLE_2:		resourceIndex = ResourceDB.INDEX_SOUND_MOOGLE_2;		break;
+			case DISSIDIA_STAIRS:		resourceIndex = ResourceDB.INDEX_SOUND_STAIRS;			break;
+			case DISSIDIA_EQUIP:		resourceIndex = ResourceDB.INDEX_SOUND_EQUIP;			break;
+			case DISSIDIA_UNEQUIP:		resourceIndex = ResourceDB.INDEX_SOUND_UNEQUIP;			break;
+		}
+
+		if(resourceIndex != -1) {
+			new playerThread(resourceIndex).start();
+		}
 
 	}
 
-	 private static class PlayerThread extends Thread {
+	 private static class playerThread extends Thread {
 
-		private Player WAVPlayer;
+		private Player wavePlayer;
+		public int resourceIndex;
 
-		public int SoundFile;
-
-		public PlayerThread(int SoundFile) {
-			this.SoundFile = SoundFile;
+		public playerThread(int resourceIndex) {
+			this.resourceIndex = resourceIndex;
 		}
 
 		@Override
 		public void run() {
 			try {
-				WAVPlayer = Manager.createPlayer(ResourceManager.GetSoundFile(SoundFile).toURI().toURL());
-				WAVPlayer.start();
+				wavePlayer = Manager.createPlayer(ResourceManager.loadSoundResource(resourceIndex).toURI().toURL());
+				wavePlayer.start();
 				sleep(3000);
-				WAVPlayer.close();
+				wavePlayer.close();
 			}
-			catch (Exception e) {
-				System.out.println(e.getMessage());
+			catch(Exception ex) {
+				ex.printStackTrace(System.err);
 			}
 		}
 	}
 
 }
-
